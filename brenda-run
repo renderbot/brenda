@@ -115,6 +115,8 @@ Examples:
                       help="Make spot requests persistent")
     parser.add_option("-T", "--terminate", action="store_true", dest="terminate",
                       help="For stop, terminate EC2 instances instead of stopping them (required for spot instances)")
+    parser.add_option("-S", "--shutdownbehavior", dest="shutdownbehavior",
+                      help="Sets instance shutdown behavior, can have values 'stop' or 'terminate'.")
     parser.add_option("-I", "--idle", action="store_true", dest="idle",
                       help="Start the EC2 instances in the idle state, without automatically running brenda-node to begin task processing")
     parser.add_option("-t", "--threshold", type="int", dest="threshold", default=0,
